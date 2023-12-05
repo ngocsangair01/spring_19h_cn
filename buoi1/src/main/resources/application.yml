@@ -1,0 +1,5 @@
+#Application.properties
+#spring.port=8080
+#Application.yml
+server:
+  port: 8081
