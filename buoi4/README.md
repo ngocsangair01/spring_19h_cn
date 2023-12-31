@@ -15,3 +15,7 @@
 
 ## Get, put, post, patch, delete với 1 table
 ## authentication, authorization, upload file (cloudinary), validation(validate định dạng email, số điện thoại), mail sender
+## bài tập về nhà 
+1. Tạo 1 class User(name, address,school)
+2. Lấy thông tin tất cả user, lấy thông tin user theo id, lấy thông tin user theo name like (ví dụ tên Sáng, có thể tìm khi ấn kí tự S, Sa,...)(gợi ý ở jpa là findAllBy...Like)
+3. Lấy thông tin theo cả 3 trường dữ liệu: name, school, address like, nếu có trường thông tin nào thì tìm theo thông tin đó, ví dụ nếu có name và address thì tìm theo name và address, nếu có name thì tìm theo name,...
