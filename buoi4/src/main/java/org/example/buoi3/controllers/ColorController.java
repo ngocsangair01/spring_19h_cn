@@ -37,4 +37,18 @@ public class ColorController {
     public ResponseEntity<?> getColorByName(String name){
         return ResponseEntity.ok(colorService.getByName(name));
     }
+    @GetMapping("/key")
+    public ResponseEntity<?> getColorByKeyword(String keyword){
+        return ResponseEntity.ok(colorService.getByKeyword(keyword));
+    }
+
+    @PutMapping("/edit/{id}")
+    public ResponseEntity<?> editAttribute(@PathVariable("id")Long id, String name,String type,String test){
+        return ResponseEntity.ok(colorService.editAttribute(id, name, type, test));
+    }
+    @PutMapping("/edit-object/{id}")
+    public ResponseEntity<?> editBody(@PathVariable("id")Long id, Color color){
+        return ResponseEntity.ok(colorService.editObjectColor(id, color));
+    }
+
 }

@@ -17,4 +17,8 @@ public interface IColorService {
     List<Color> getByName(String name);
     //Nhập vào 1 từ, gọi là keyword => tìm ra được tất cả các thông tin chứa nó (name,type,test)
     List<Color> getByKeyword(String keyword);
+    //Truyền từng thuộc tính,truyền đến đâu sửa đến đó
+    Color editAttribute(Long id,String name, String type, String test);
+    //Truyền vào hẳn 1 đối tượng có id là id của đối tượng cũ, sau đó đè lên đối tượng cũ
+    Color editObjectColor(Long id,Color color);
 }

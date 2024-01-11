@@ -6,6 +6,7 @@ import org.example.buoi3.services.IColorService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ColorServiceImp implements IColorService {
@@ -47,6 +48,23 @@ public class ColorServiceImp implements IColorService {
 
     @Override
     public List<Color> getByKeyword(String keyword) {
-        return null;
+        return colorRepository.getByKeyword(keyword);
+    }
+
+    @Override
+    public Color editAttribute(Long id, String name, String type, String test) {
+        // B1 Tìm kiếm đối tượng theo id => set các thuộc tính cho đối tượng => Lưu đối tượng vào database
+        Optional<Color> color = colorRepository.findById(id);
+        color.get().setName(name);
+        color.get().setType(type);
+        color.get().setTest(test);
+        colorRepository.save(color.get());
+        return color.get();
+    }
+
+    @Override
+    public Color editObjectColor(Long id, Color color) {
+        colorRepository.save(color);
+        return color;
     }
 }

@@ -15,6 +15,9 @@ public interface ColorRepository extends JpaRepository<Color,Long> {
     @Query("select c from Color c where upper(c.test) like upper(concat('%',?1,'%') ) ")
     List<Color> getByName(String name);
 
+    @Query("select c from Color c where upper(c.test) like upper(concat('%',?1,'%') ) or upper(c.name) like upper(concat('%',?1,'%') ) or upper(c.type) like upper(concat('%',?1,'%') ) ")
+    List<Color> getByKeyword(String keyword);
+
     /**
      * select *
      * from color
