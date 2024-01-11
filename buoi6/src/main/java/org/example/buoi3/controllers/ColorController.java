@@ -33,8 +33,4 @@ public class ColorController {
     public ResponseEntity<?> getColorByType(String type){
         return ResponseEntity.ok(colorService.getColorByType(type));
     }
-    @GetMapping("/name")
-    public ResponseEntity<?> getColorByName(String name){
-        return ResponseEntity.ok(colorService.getByName(name));
-    }
 }

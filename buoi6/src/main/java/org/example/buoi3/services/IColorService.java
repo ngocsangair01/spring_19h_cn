@@ -13,8 +13,4 @@ public interface IColorService {
     List<Color> getAllColor();
     List<Color> getColorByType(String type);
     Color createColorBody(Color color);
-    //Yêu cầu đầu bài: lấy thông tin các màu sắc có tên có chứa ký tự do, ví dụ nhập input là 'd', 'o' => đều in ra được kết quả
-    List<Color> getByName(String name);
-    //Nhập vào 1 từ, gọi là keyword => tìm ra được tất cả các thông tin chứa nó (name,type,test)
-    List<Color> getByKeyword(String keyword);
 }

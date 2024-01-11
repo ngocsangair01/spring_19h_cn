@@ -38,15 +38,4 @@ public class ColorServiceImp implements IColorService {
         colorRepository.save(color);
         return color;
     }
-
-    @Override
-    public List<Color> getByName(String name) {
-        List<Color> colors = colorRepository.getByName(name);
-        return colors;
-    }
-
-    @Override
-    public List<Color> getByKeyword(String keyword) {
-        return null;
-    }
 }

@@ -11,13 +11,4 @@ import java.util.List;
 public interface ColorRepository extends JpaRepository<Color,Long> {
     @Query("select c from Color c ")
     List<Color> findAllByType(String type);
-
-    @Query("select c from Color c where upper(c.test) like upper(concat('%',?1,'%') ) ")
-    List<Color> getByName(String name);
-
-    /**
-     * select *
-     * from color
-     * where upper(test) like upper('%test%')
-     * **/
 }
